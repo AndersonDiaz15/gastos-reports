@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","928","Carga la página correctamente","","Tue Oct 07 17:06:29 UTC 2025","passed","Tue Oct 07 17:06:30 UTC 2025","","Pruebas de la página de gastos","Pruebas de la página de gastos","Carga la página correctamente"
+"","857","Agrega un gasto y actualiza el total","","Tue Oct 07 17:06:30 UTC 2025","passed","Tue Oct 07 17:06:31 UTC 2025","","Pruebas de la página de gastos","Pruebas de la página de gastos","Agrega un gasto y actualiza el total"
+"","234","Muestra el formulario al hacer click en la imagen añadir","","Tue Oct 07 17:06:30 UTC 2025","passed","Tue Oct 07 17:06:30 UTC 2025","","Pruebas de la página de gastos","Pruebas de la página de gastos","Muestra el formulario al hacer click en la imagen añadir"
