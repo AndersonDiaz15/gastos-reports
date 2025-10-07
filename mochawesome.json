@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-07T17:45:45.619Z",
+    "end": "2025-10-07T17:45:47.250Z",
+    "duration": 1631,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "295f346e-fd10-4c5b-9245-51f25f7c4cbc",
+      "title": "",
+      "fullFile": "cypress/e2e/prueba.cy.js",
+      "file": "cypress/e2e/prueba.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "04ded847-7308-4529-8672-a49f75399dee",
+          "title": "Pruebas de la página de gastos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Carga la página correctamente",
+              "fullTitle": "Pruebas de la página de gastos Carga la página correctamente",
+              "timedOut": null,
+              "duration": 513,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"/\");\ncy.get(\"p\").contains(\"Has gastado\"); // Verifica el texto inicial",
+              "err": {},
+              "uuid": "783964d5-fb1d-4550-9e53-e639ceea6f3a",
+              "parentUUID": "04ded847-7308-4529-8672-a49f75399dee",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Muestra el formulario al hacer click en la imagen añadir",
+              "fullTitle": "Pruebas de la página de gastos Muestra el formulario al hacer click en la imagen añadir",
+              "timedOut": null,
+              "duration": 323,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"/\");\ncy.get(\"#añadir\").click();\ncy.get(\"#formulario\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "4a32ed21-7306-484f-8186-3b39dd3610ee",
+              "parentUUID": "04ded847-7308-4529-8672-a49f75399dee",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Agrega un gasto y actualiza el total",
+              "fullTitle": "Pruebas de la página de gastos Agrega un gasto y actualiza el total",
+              "timedOut": null,
+              "duration": 729,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"/\");\n// Abrir formulario\ncy.get(\"#añadir\").click();\n// Llenar inputs\ncy.get('input[name=\"descripcion\"]').type(\"Cafe tostao\");\ncy.get('input[name=\"precio\"]').type(\"5000\");\n// Click en agregar\ncy.get(\"#agregarGasto\").click();\n// Verifica que el total se actualizó\ncy.get(\"h2\").first().should(\"contain\", \"5000\");\n// Verifica que aparece la caja con el gasto\ncy.get(\".caja\").should(\"exist\").and(\"be.visible\");\ncy.get(\".caja p\").should(\"contain\", \"Cafe tostao\");\ncy.get(\".caja h2\").should(\"contain\", \"5000\");",
+              "err": {},
+              "uuid": "f4f878c3-2749-4f0c-8183-8682d2d11cd8",
+              "parentUUID": "04ded847-7308-4529-8672-a49f75399dee",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "783964d5-fb1d-4550-9e53-e639ceea6f3a",
+            "4a32ed21-7306-484f-8186-3b39dd3610ee",
+            "f4f878c3-2749-4f0c-8183-8682d2d11cd8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1565,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}
